@@ -1,18 +1,24 @@
-const RolloNO = [12, 13, 5, 7, 2, 1, 6, 8, 9, 11, 3, 4, 54, 45, 33, 23, 18];
+const Values = [1, 2, 3, 1, 2, 3, 4, 4, 5, 5, 6, 7, 8, 9, 9, 8, 10, 10];
 
-function bubbleSort(str) {
-  for (i = 0; i < str.length; i++) {
-    for (j = 0; j < str.length; j++) {
-      if (str[j] > str[j + 1]) {
-        let tem = str[j];
-        str[j] = str[j + 1];
-        str[j + 1] = tem;
-      }
+const res = Values.filter((x, val) => {
+  return Values.indexOf(x) === val;
+});
+
+console.log(res); // output - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function removeDuplicate(str) {
+  let newValue = [];
+
+  str.forEach((val) => {
+    if (!newValue.includes(val)) {
+      newValue.push(val);
     }
-  }
-  return str;
+  });
+  return newValue;
 }
+console.log(removeDuplicate(Values)); // output - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-console.log(bubbleSort(RolloNO));
+let res1 = [...new Set(Values)]
 
-// output = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 18, 23, 33, 45, 54]
+console.log(res1);   // output - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
