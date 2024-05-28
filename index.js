@@ -1,24 +1,20 @@
-const Values = [1, 2, 3, 1, 2, 3, 4, 4, 5, 5, 6, 7, 8, 9, 9, 8, 10, 10];
+const Values = [
+  { id: 1, Employee: "Asan", Mark: 100 },
 
-const res = Values.filter((x, val) => {
-  return Values.indexOf(x) === val;
-});
+  { id: 1, Employee: "Asan", Mark: 100 },
 
-console.log(res); // output - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  { id: 2, Employee: "Shami", Mark: 110 },
 
-function removeDuplicate(str) {
-  let newValue = [];
+  { id: 2, Employee: "Shami", Mark: 110 },
 
-  str.forEach((val) => {
-    if (!newValue.includes(val)) {
-      newValue.push(val);
-    }
-  });
-  return newValue;
-}
-console.log(removeDuplicate(Values)); // output - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  { id: 3, Employee: "Faheem", Mark: 105 },
 
-let res1 = [...new Set(Values)]
+  { id: 3, Employee: "Faheem", Mark: 105 },
+];
 
-console.log(res1);   // output - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+const res = Values.filter((x,val) => {
+  return Values.findIndex((Obj) => x.id === Obj.id && x.Employee === Obj.Employee && x.Mark === Obj.Mark) === val
+})
+
+console.log(res);
