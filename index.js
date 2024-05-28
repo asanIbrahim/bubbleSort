@@ -1,33 +1,30 @@
-const Values = [
-  { id: 1, Employee: "Asan", Mark: 100 },
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
-  { id: 1, Employee: "Asan", Mark: 100 },
+let prices = [7, 1, 5, 3, 6, 4];
 
-  { id: 2, Employee: "Shami", Mark: 110 },
+let prices2 = [7, 6, 4, 3, 1];
 
-  { id: 2, Employee: "Shami", Mark: 110 },
+function maxProfitOfStock(price) {
+  let left = 0;
+  let right = 1;
+  let maxProfit = 0;
 
-  { id: 3, Employee: "Faheem", Mark: 105 },
+  while (right < price.length) {
+    if (price[left] < price[right]) {
+      let profit = price[right] - price[left];
+      maxProfit = Math.max(maxProfit, profit);
+    } else {
+      left = right;
+    }
+    right++;
+  }
+  return maxProfit;
+}
 
-  { id: 3, Employee: "Faheem", Mark: 105 },
-];
+console.log(maxProfitOfStock(prices));
+console.log(maxProfitOfStock(prices2));
 
-
-const res = Values.filter((x,val) => {
-  return Values.findIndex((Obj) => x.id === Obj.id && x.Employee === Obj.Employee && x.Mark === Obj.Mark) === val
-})
-
-console.log(res);
-
-// ///0
-// : 
-// {id: 1, Employee: 'Asan', Mark: 100}
-// 1
-// : 
-// {id: 2, Employee: 'Shami', Mark: 110}
-// 2
-// : 
-// {id: 3, Employee: 'Faheem', Mark: 105}
-// length
-// : 
-// 3
+//output 5
+//output 0
