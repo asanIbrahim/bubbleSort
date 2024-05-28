@@ -18,3 +18,16 @@ const res = Values.filter((x,val) => {
 })
 
 console.log(res);
+
+// ///0
+// : 
+// {id: 1, Employee: 'Asan', Mark: 100}
+// 1
+// : 
+// {id: 2, Employee: 'Shami', Mark: 110}
+// 2
+// : 
+// {id: 3, Employee: 'Faheem', Mark: 105}
+// length
+// : 
+// 3
