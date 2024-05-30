@@ -1,10 +1,10 @@
 // Given an integer x, return true if x is a palindrome,and false otherwise.
 
-let input = -121;
+let input = 10;
 
 function isPalindrome(str){
  let convertString = str.toString()
- let convertWord = convertString.split(' ').reverse().join('')
+ let convertWord = convertString.split('').reverse().join('')
  return convertString === convertWord
 }
  
