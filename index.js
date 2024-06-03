@@ -1,21 +1,12 @@
-const value = [5,2,3,1,15,21,12,9,8,6,11,7]
+const value = [1,2,3,4,5,6,7]
+let k =3
 
-
-function bubbleSort(str){
-
-  for(i =0 ; i < str.length; i++){
-    for(j=0 ; j< str.length ; j++){
-      if(str[j] > str[j+1]){
-        let tem = str[j]
-        str[j] = str[j+1]
-        str[j+1] = tem
-      }
-    }
-  }
-
-  return str
+function roateArray(num,k){
+  k = k % num.length
+ num.unshift(...num.splice(num.length -k ,k))
+ return num
 }
 
-console.log(bubbleSort(value));
+console.log(roateArray(value,k));
 
-//output = [1, 2, 3, 5, 6, 7, 8, 9, 11, 12, 15, 21]
+//output [5, 6, 7, 1, 2, 3, 4]
