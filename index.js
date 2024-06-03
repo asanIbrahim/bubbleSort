@@ -1,6 +1,7 @@
 const value = [1,2,3,4,5,6,7]
 let nums = [-1,-100,3,99]
-let k =2
+let water = [6,5,4,1,2,3]
+let k =3
 
 function roateArray(num,k){
   k = k % num.length
@@ -8,8 +9,8 @@ function roateArray(num,k){
  return num
 }
 
-console.log(roateArray(nums,k));
+console.log(roateArray(water,k));
+// //output [1, 2, 3, 6, 5, 4]
 // output [3, 99, -1, -100]
 // console.log(roateArray(value,k));
-
 //output [5, 6, 7, 1, 2, 3, 4]
