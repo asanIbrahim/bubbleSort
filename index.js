@@ -9,4 +9,4 @@ function roateArray(num,k){
 
 console.log(roateArray(value,k));
 
-//output [5, 6, 7, 1, 2, 3, 4]
+//output [5, 6, 7, 1, 2, 3, 4] add 
