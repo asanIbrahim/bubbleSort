@@ -10,8 +10,8 @@ function roateArray(num,k){
 }
 
 console.log(roateArray(water,k));
-//outputsss
-//[1, 2, 3, 6, 5, 4] output for roateArray;
+//outputs
+////[1, 2, 3, 6, 5, 4] output for roateArray;
 //[3, 99, -1, -100] outputs
 //console.log(roateArray(value,k))
 //output [5, 6, 7, 1, 2, 3, 4]///
