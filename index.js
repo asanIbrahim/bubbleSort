@@ -1,20 +1,16 @@
-// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+let  value = [20,12,18,15,1,5,8,2,9,4,3,11,17]
 
-// You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-// You can return the answer in any order.
-
-let nums = [2,7,11,15], target = 9
-// Output: [0,1]
-// Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-function twoSum(nums,target){
-  for(i=0 ; i < nums.length; i++){
-    for(j=i+1 ; j< nums.length; j++){
-      if(nums[i] + nums[j] == target)
-        return [i,j]
+function buubleSort(val){
+  for(i=0; i<val.length ; i++){
+    for(j=0; j<val.length ; j++){
+      if(val[j] > val[j+1]){
+        let tem = val[j]
+        val[j] = val[j+1]
+        val[j+1] = tem
+      }
     }
   }
+  return val
 }
 
-console.log(twoSum(nums,target));
+console.log(buubleSort(value));
