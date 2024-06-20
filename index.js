@@ -1,17 +1,20 @@
-const value = [1,2,3,4,5,6,7]
-let nums = [-1,-100,3,99]
-let water = [6,5,4,1,2,3]
-let k =3;
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-function roateArray (num,k) {
-  k = k % num.length
- num.unshift(...num.splice(num.length -k ,k))
- return num
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+// You can return the answer in any order.
+
+let nums = [2,7,11,15], target = 9
+// Output: [0,1]
+// Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+function twoSum(nums,target){
+  for(i=0 ; i < nums.length; i++){
+    for(j=i+1 ; j< nums.length; j++){
+      if(nums[i] + nums[j] == target)
+        return [i,j]
+    }
+  }
 }
 
-console.log(roateArray(water,k));
-//outputs
-//[1, 2, 3, 6, 5, 4] output for roateArray
-//[3, 99, -1, -100] output
-///console.log(roateArray(value,k))
-//output[5, 6, 7, 1, 2, 3, 4]
+console.log(twoSum(nums,target));
