@@ -10,7 +10,7 @@ function buubleSort(val){
       }
     }
   }
-  return val
+  return val;
 }
-//outputs[1, 2, 3, 4, 5, 8, 9, 11, 12, 15, 17, 18, 20]
+//outputs[1, 2, 3, 4, 5, 8, 9, 11, 12, 15, 17, 18, 20];
 console.log(buubleSort(value))
