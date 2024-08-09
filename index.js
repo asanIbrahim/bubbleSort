@@ -1,4 +1,4 @@
-let  value = [20,12,18,15,1,5,8,2,9,4,3,11,17];
+let  value = [20,12,18,15,1,5,8,2,9,4,3,11,17];;
 const  buubleSort = (val) => {
   for(i=0; i<val.length ; i++){
     for(j=0; j<val.length ; j++){
@@ -11,5 +11,5 @@ const  buubleSort = (val) => {
   }
   return val;
 }
-//outputs[1, 2, 3, 4, 5, 8, 9, 11, 12, 15, 17, 18, 20];
+//outputs[1, 2, 3, 4, 5, 8, 9, 11, 12, 15, 17, 18, 20];;
 console.log(buubleSort(value))
